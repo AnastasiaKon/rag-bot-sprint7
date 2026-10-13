@@ -1,0 +1,10 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "documents": 55,
+  "chunks": 588,
+  "chunk_size_chars": 800,
+  "chunk_overlap_chars": 120,
+  "build_seconds": 18.6,
+  "index_type": "faiss.IndexFlatIP (cosine on normalized vectors)"
+}
