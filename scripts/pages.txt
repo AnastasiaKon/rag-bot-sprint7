@@ -1,0 +1,60 @@
+# Персонажи
+Luke Skywalker
+Anakin Skywalker
+Leia Organa
+Han Solo
+Obi-Wan Kenobi
+Yoda
+Padmé Amidala
+Darth Sidious
+Darth Maul
+Count Dooku
+Chewbacca
+R2-D2
+C-3PO
+Lando Calrissian
+Boba Fett
+Jabba Desilijic Tiure
+Rey Skywalker
+Kylo Ren
+Ahsoka Tano
+Din Djarin
+Grogu
+Mace Windu
+Qui-Gon Jinn
+Grand Moff Tarkin
+Grand Admiral Thrawn
+# Планеты и места
+Tatooine
+Coruscant
+Naboo
+Hoth
+Endor
+Dagobah
+Mustafar
+Alderaan
+Kashyyyk
+# Технологии, корабли, оружие
+DS-1 Death Star Mobile Battle Station
+Millennium Falcon
+Lightsaber
+X-wing starfighter
+TIE/ln space superiority starfighter
+Star Destroyer
+Hyperdrive
+Blaster
+# Организации и понятия
+The Force
+Jedi Order
+Sith
+Galactic Empire
+Galactic Republic
+Rebel Alliance
+Clone trooper
+Stormtrooper
+Mandalorian
+# События
+Clone Wars
+Battle of Yavin
+Order 66
+Battle of Endor
