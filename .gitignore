@@ -3,7 +3,5 @@ __pycache__/
 *.pyc
 .env
 data/raw/
-index/*.faiss
-index/*.pkl
 .pytest_cache/
 .DS_Store
