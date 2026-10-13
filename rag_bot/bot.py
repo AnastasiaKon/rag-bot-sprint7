@@ -9,6 +9,7 @@
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 
 from .llm import LLM
@@ -87,5 +88,7 @@ class RagBot:
         system = build_system(pre_prompt=self.protection.pre_prompt)
         user = build_user_message(question, relevant, few_shot=self.few_shot)
         text = self.llm.complete(system, user)
-        refused = "я не знаю" in text.lower() or "i don't know" in text.lower()
+        # отказ - когда «не знаю» стоит в самом ответе, а не в одном из шагов рассуждения
+        refused = bool(re.search(r"(ответ|answer)\W{0,5}(я не знаю|i don'?t know)", text, re.I)) \
+            or text.lower().startswith(("я не знаю", "i don't know"))
         return Answer(question, text, relevant, dropped, prot, refused=refused)

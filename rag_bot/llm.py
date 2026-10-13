@@ -23,7 +23,8 @@ def make_llm(provider: str | None = None, model: str | None = None, temperature:
     model = model or os.getenv("LLM_MODEL") or DEFAULTS[provider]
     if provider == "anthropic":
         from langchain_anthropic import ChatAnthropic
-        return ChatAnthropic(model=model, temperature=temperature, max_tokens=800)
+        # у новых моделей Claude параметр temperature объявлен устаревшим - не передаём
+        return ChatAnthropic(model=model, max_tokens=1500)
     if provider == "openai":
         from langchain_openai import ChatOpenAI
         return ChatOpenAI(model=model, temperature=temperature)
