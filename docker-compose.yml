@@ -1,0 +1,19 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    stdin_open: true     # нужен для REPL: docker compose run bot
+    tty: true
+    volumes:
+      - faiss-index:/app/index   # FAISS-индекс живёт в томе и переживает пересборку
+      - ./logs:/app/logs
+
+  # Пересборка индекса отдельным сервисом: docker compose run --rm indexer
+  indexer:
+    build: .
+    entrypoint: ["python", "build_index.py", "--extra", "data/malicious"]
+    volumes:
+      - faiss-index:/app/index
+
+volumes:
+  faiss-index:
